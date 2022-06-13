@@ -1,0 +1,47 @@
+body{
+    background-image: url(/Asgard.jpg);
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.login-cont{
+    font-family: arial;
+    margin-top: 200px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: whitesmoke;
+    font-style: italic;
+    background-color: rgba(10, 10, 255, 0.6);
+    box-sizing: border-box;
+    border-radius: 10px;
+
+
+}
+
+p a{
+    text-decoration: none;
+    color: cornsilk;
+}
+
+.login-btn{
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    color: blue;
+    background-color:chartreuse;
+    font-weight: bold;
+}
+
+.input-btn{
+    width: 200px;
+    height: 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
