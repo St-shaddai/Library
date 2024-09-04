@@ -1,0 +1,30 @@
+#import packages
+
+  import pandas as pd
+  import os
+  import glob
+  from openpyxl import Workbook
+  pip install pyxlsb
+
+#define path
+  path = '/Users/emmanuel.olatunbosun/Downloads/report_name'
+
+#create an array of file(s)
+  df = glob.glob(path + "/team*.xlsb")
+
+#create a dataFrame and append them into an array
+  df2 = []
+  for file in df:
+      combine_sheets = pd.read_excel(file, sheet_name = None, header = None, engine= 'pyxlsb')
+      df2.append(combine_sheets)
+
+#if the excel file has several sheets then read each sheet into the dataFrame
+  dataframe = []
+  for file_sheets in df2:
+    for sheet_name, sheet_data in file_sheets.items():
+        dataframe.append(pd.DataFrame(sheet_data))
+
+#concat them into a single dataFrame
+  df3 = pd.concat(dataframe, ignore_index=True)
+
+#
